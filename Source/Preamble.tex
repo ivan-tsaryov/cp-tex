@@ -1,0 +1,24 @@
+% Настройка стилей для заголовков (запихать внутрь begin если ошибки)
+\ESKDsectStyle{section}{\large \bfseries}
+\ESKDsectSkip{section}{0pt}{12pt}
+\ESKDsectStyle{subsection}{\normalsize \bfseries}
+\ESKDsectSkip{subsection}{12pt}{6pt}
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+\usepackage{xecyr}
+% Enagles loading of OpenType fonts
+	\usepackage[cm-default]{fontspec}
+\newcommand{\No}{№} % Костыль для совместимости
+% Установка глобального шрифта
+\setmainfont[Path=/home/ivan/MEGA/Study/Схемотехника/Курсовая работа/Fonts/,
+BoldFont=*-bold.ttf,
+ItalicFont=*-italic.ttf,
+BoldItalicFont=*-bold-italic.ttf,
+]{gost-a}
+
+% Нумерация списков цифрами с точкой
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\labelenumi}{\theenumi.}

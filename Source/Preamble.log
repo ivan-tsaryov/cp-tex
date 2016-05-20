@@ -1,0 +1,35 @@
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2016.5.7)  15 MAY 2016 22:35
+ restricted \write18 enabled.
+**Preamble.tex
+(./Preamble.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 9 languages loaded.
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \usepackage{
+              xecyr}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+)
+! Emergency stop.
+<*> Preamble.tex
+             
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 9 strings out of 494712
+ 100000,106986 words of node,token memory allocated 188 words of node memory still in use:
+   31 glue_spec, 1 dir nodes
+   avail lists: 2:12,3:1
+ 3743 multiletter control sequences out of 65536+600000
+ 14 fonts using 563007 bytes
+ 7i,0n,6p,86b,14s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!
