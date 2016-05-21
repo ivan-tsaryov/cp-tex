@@ -1,4 +1,5 @@
 % Настройка стилей для заголовков (запихать внутрь begin если ошибки)
+\ESKDsectAlign{section}{Center}
 \ESKDsectStyle{section}{\large \bfseries}
 \ESKDsectSkip{section}{0pt}{12pt}
 \ESKDsectStyle{subsection}{\normalsize \bfseries}
@@ -7,8 +8,8 @@
 %%% Дополнительная работа с математикой
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
 \usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
-
 \usepackage{xecyr}
+
 % Enagles loading of OpenType fonts
 	\usepackage[cm-default]{fontspec}
 \newcommand{\No}{№} % Костыль для совместимости
@@ -18,6 +19,8 @@ BoldFont=*-bold.ttf,
 ItalicFont=*-italic.ttf,
 BoldItalicFont=*-bold-italic.ttf,
 ]{gost-a}
+
+\renewcommand\thesection{{}} 		% убирает нумерацию глав в содержании
 
 % Нумерация списков цифрами с точкой
 \renewcommand{\theenumi}{\arabic{enumi}}
