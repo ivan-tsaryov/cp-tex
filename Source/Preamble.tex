@@ -5,22 +5,46 @@
 \ESKDsectStyle{subsection}{\normalsize \bfseries}
 \ESKDsectSkip{subsection}{12pt}{6pt}
 
-%%% Дополнительная работа с математикой
-\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
-\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
 \usepackage{xecyr}
 
-% Enagles loading of OpenType fonts
-	\usepackage[cm-default]{fontspec}
+% Костыль для тире
+\newcommand*{\longndash}{-\kern-0.22em-~}
+\newcommand*{\longmdash}{-\kern-0.20em-\kern-0.20em-\kern-0.20em-}
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+% Чтобы использовать символ градуса (°) - \degree
+\usepackage{gensymb}
+
+% Enables loading of OpenType fonts
+\usepackage[cm-default]{fontspec}
+
+% Чтобы использовать << >>, если поддерживает шрифт
+\defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{Ligatures=TeX}
+	
 \newcommand{\No}{№} % Костыль для совместимости
+
 % Установка глобального шрифта
 \setmainfont[Path=/home/ivan/MEGA/Study/Схемотехника/Курсовая работа/Fonts/,
 BoldFont=*-bold.ttf,
 ItalicFont=*-italic.ttf,
 BoldItalicFont=*-bold-italic.ttf,
+Mapping=tex-text,
+Renderer=Basic
 ]{gost-a}
 
-\renewcommand\thesection{{}} 		% убирает нумерацию глав в содержании
+% Установка начертания подписей
+\DeclareCaptionLabelSeparator{longndash}{ \longndash}
+\captionsetup[figure]{%
+labelsep=longndash,justification=centering,singlelinecheck=false,%
+aboveskip=0mm,belowskip=3mm}
+\usepackage[font=it]{caption}
+
+% Убирает нумерацию глав в содержании
+\renewcommand\thesection{{}} 		
 
 % Нумерация списков цифрами с точкой
 \renewcommand{\theenumi}{\arabic{enumi}}
