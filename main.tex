@@ -1,6 +1,6 @@
 \documentclass[a4paper, nocolumnsxix]{eskdtext}
 
-\ESKDtitle{Устройство для получения пчелиного яда}
+%\ESKDtitle{Устройство для получения пчелиного яда}
 \ESKDsignature{ВТ.СхТ.КП.П3.16}
 \ESKDauthor{Царёв~И.~Г.}
 \ESKDchecker{Куцоконь~Н.~С.}
@@ -12,13 +12,16 @@
 	\itshape
 	
 	\include{Source/Title}				% Титульник
+	
+	\makedocname{Устройство для получения пчелиного яда}{}{1}
 	\ESKDthisStyle{formII}				% Стиль Форма 2 для оглавления
 		\tableofcontents				% Оглавление	
+		
 	\include{Source/Targets}			% Задание
 	\include{Source/Intro}				% Введение
 	\include{Source/Body/History}		% История вопроса
 %	\include{Source/Body/Philosophy}	% Принцип работы
-	\ESKDthisStyle{formII}
+	\ESKDthisStyle{formII}	
 		\include{Source/Body/Structural}	% Структурная схема
 	\ESKDthisStyle{formII}
 		\include{Source/Body/Functional}	% Функциональная схема

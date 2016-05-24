@@ -56,3 +56,16 @@ aboveskip=0mm,belowskip=3mm}
 % Нумерация списков цифрами с точкой
 \renewcommand{\theenumi}{\arabic{enumi}}
 \renewcommand{\labelenumi}{\theenumi.}
+
+% Костыль для добавления в основную надпись
+\newcommand{\makedocname}[3]{
+	\ESKDputOnStyle{formII}{}{
+		\ifnum1=#3\relax
+		  \put(86, 6){\parbox[b][23mm][c]{66mm}{\renewcommand{\baselinestretch}{0.8}\centering\normalsize #1}}
+		\else
+		  \put(86, 12){\parbox[b][23mm][c]{66mm}{\renewcommand{\baselinestretch}{0.8}\centering\normalsize #1}}
+		\fi	
+		
+		\put(86,4){\parbox[b][13mm][c]{66mm}{\renewcommand{\baselinestretch}{0.8}\centering\normalsize #2}}
+	}
+}
