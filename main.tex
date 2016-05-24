@@ -4,6 +4,7 @@
 \ESKDsignature{ВТ.СхТ.КП.П3.16}
 \ESKDauthor{Царёв~И.~Г.}
 \ESKDchecker{Куцоконь~Н.~С.}
+\ESKDcolumnIX{УлГТУ ИВТАПбд-31}
 
 \input{Source/Preamble}
 
@@ -17,9 +18,12 @@
 	\include{Source/Intro}				% Введение
 	\include{Source/Body/History}		% История вопроса
 %	\include{Source/Body/Philosophy}	% Принцип работы
-%	\include{Source/Body/Structural}	% Структурная схема
-%	\include{Source/Body/Functional}	% Функциональная схема
-%	\include{Source/Body/Principal}		% Принципиальная схема
+	\ESKDthisStyle{formII}
+		\include{Source/Body/Structural}	% Структурная схема
+	\ESKDthisStyle{formII}
+		\include{Source/Body/Functional}	% Функциональная схема
+	\ESKDthisStyle{formII}
+		\include{Source/Body/Principal}		% Принципиальная схема
 %	\include{Source/Body/Description}	% Описание работы устройства
 %	\include{Source/Body/Timing}		% Временные диаграммы
 %	\include{Source/Body/Microcircuits}	% Описание микросхем

@@ -17,7 +17,7 @@
 
 % Чтобы использовать символ градуса (°) - \degree
 \usepackage{gensymb}
-
+\usepackage{pdfpages}
 % Enables loading of OpenType fonts
 \usepackage[cm-default]{fontspec}
 
@@ -27,14 +27,21 @@
 	
 \newcommand{\No}{№} % Костыль для совместимости
 
-% Установка глобального шрифта
-\setmainfont[Path=/home/ivan/MEGA/Study/Схемотехника/Курсовая работа/Fonts/,
-BoldFont=*-bold.ttf,
-ItalicFont=*-italic.ttf,
-BoldItalicFont=*-bold-italic.ttf,
-Mapping=tex-text,
-Renderer=Basic
-]{gost-a}
+% Установка глобального шрифта (FakeBold, FakeSlant - костыль для жирного и курсива)
+\setmainfont[
+	Path=/home/ivan/MEGA/Study/Схемотехника/Курсовая работа/Fonts/,
+	Mapping=tex-text,
+	Renderer=Basic,
+	AutoFakeBold=1,
+	AutoFakeSlant=0.3
+]{isocpeur}
+%\setmainfont[Path=/home/ivan/MEGA/Study/Схемотехника/Курсовая работа/Fonts/,
+%BoldFont=*-bold.ttf,
+%ItalicFont=*-italic.ttf,
+%BoldItalicFont=*-bold-italic.ttf,
+%Mapping=tex-text,
+%Renderer=Basic
+%]{gost-a}
 
 % Установка начертания подписей
 \DeclareCaptionLabelSeparator{longndash}{ \longndash}
