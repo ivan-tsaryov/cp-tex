@@ -51,7 +51,8 @@ aboveskip=0mm,belowskip=3mm}
 \usepackage[font=it]{caption}
 
 % Убирает нумерацию глав в содержании
-\renewcommand\thesection{{}} 		
+\setcounter{secnumdepth}{0}
+%\renewcommand\thesection{{}} 		
 
 % Нумерация списков цифрами с точкой
 \renewcommand{\theenumi}{\arabic{enumi}}
