@@ -4,8 +4,12 @@
 \ESKDsectSkip{section}{0pt}{12pt}
 \ESKDsectStyle{subsection}{\normalsize \bfseries}
 \ESKDsectSkip{subsection}{12pt}{6pt}
+\ESKDsectStyle{subsubsection}{\normalsize \bfseries}
+\ESKDsectSkip{subsubsection}{12pt}{6pt}
 
 \usepackage{xecyr}
+
+\newcommand{\tab}[2]{\hspace{#2\textwidth}\rlap{#1}}
 
 % Костыль для тире
 \newcommand*{\longndash}{-\kern-0.22em-~}
@@ -14,6 +18,13 @@
 % Дополнительная работа с математикой
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
 \usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+	
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} 	 % Красивый матшрифт
+\usepackage{mathtext} 	 % Русские буквы в формулах
+\usepackage[T2A]{fontenc}
+\usepackage{indentfirst} % Первый абзац тоже с красной строки
 
 % Чтобы использовать символ градуса (°) - \degree
 \usepackage{gensymb}
